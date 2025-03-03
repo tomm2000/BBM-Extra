@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<Kinds>
+		<InsertOrIgnore Kind="KIND_BELIEF"/>
+	</Kinds>
+	<Types>
+		<Row Type="BBM_PANTHEON_BONUS_2" Kind="KIND_BELIEF"/>
+
+    <Row Type="BBM_MOD_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION_TYPE" Kind="KIND_MODIFIER"/>
+    <Row Type="BBM_ATTACH_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION_TYPE" Kind="KIND_MODIFIER"/>
+
+    <Row Type="BBM_MOD_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION_TYPE" Kind="KIND_MODIFIER"/>
+    <Row Type="BBM_ATTACH_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION_TYPE" Kind="KIND_MODIFIER"/>
+	</Types>
+	<Beliefs>
+		<Row
+      BeliefType="BBM_PANTHEON_BONUS_2"
+      BeliefClassType="BELIEF_CLASS_PANTHEON"
+      Description="BBM_LOC_PANTHEON_BONUS_2_DESCRIPTION"
+      Name="BBM_LOC_PANTHEON_BONUS_2_NAME"
+    />
+	</Beliefs>
+  <BeliefModifiers>
+    <Row
+      BeliefType="BBM_PANTHEON_BONUS_2"
+      ModifierId="BBM_MOD_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION"
+    />
+    <Row
+      BeliefType="BBM_PANTHEON_BONUS_2"
+      ModifierId="BBM_MOD_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION"
+    />
+  </BeliefModifiers>
+  <DynamicModifiers>
+    <Row
+      ModifierType="BBM_MOD_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION_TYPE"
+      CollectionType="COLLECTION_MAJOR_PLAYERS"
+      EffectType="EFFECT_ATTACH_MODIFIERS"
+    />
+    <Row
+      ModifierType="BBM_ATTACH_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION_TYPE"
+      CollectionType="COLLECTION_PLAYER_CITIES"
+      EffectType="EFFECT_CITY_ACTIVATE_CONSTRUCTIBLE_WAREHOUSE_YIELD"
+    />
+
+    <Row
+      ModifierType="BBM_MOD_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION_TYPE"
+      CollectionType="COLLECTION_MAJOR_PLAYERS"
+      EffectType="EFFECT_ATTACH_MODIFIERS"
+    />
+    <Row
+      ModifierType="BBM_ATTACH_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION_TYPE"
+      CollectionType="COLLECTION_PLAYER_CITIES"
+      EffectType="EFFECT_CITY_ACTIVATE_CONSTRUCTIBLE_WAREHOUSE_YIELD"
+    />
+  </DynamicModifiers>
+  <Modifiers>
+    <Row
+      ModifierId="BBM_MOD_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION"
+      ModifierType="BBM_MOD_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION_TYPE"
+      SubjectRequirementSetId="BBM_MOD_PANTHEON_ALTAR_RIVER_PRODUCTION_SUBJECT_REQUIREMENTS"
+    />
+    <Row
+      ModifierId="BBM_ATTACH_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION"
+      ModifierType="BBM_ATTACH_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION_TYPE"
+    />
+
+    <Row
+      ModifierId="BBM_MOD_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION"
+      ModifierType="BBM_MOD_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION_TYPE"
+      SubjectRequirementSetId="BBM_MOD_PANTHEON_ALTAR_RIVER_PRODUCTION_SUBJECT_REQUIREMENTS"
+    />
+    <Row
+      ModifierId="BBM_ATTACH_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION"
+      ModifierType="BBM_ATTACH_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION_TYPE"
+    />
+  </Modifiers>
+  <ModifierArguments>
+    <Row
+      ModifierId="BBM_MOD_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION"
+      Name="ModifierId"
+      Value="BBM_ATTACH_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION"
+    />
+    <Row
+      ModifierId="BBM_ATTACH_PANTHEON_ALTAR_MINOR_RIVER_PRODUCTION"
+      Name="ConstructibleWarehouseYield"
+      Value="BBM_PantheonAltarMinorRiverProduction"
+    />
+
+    <Row
+      ModifierId="BBM_MOD_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION"
+      Name="ModifierId"
+      Value="BBM_ATTACH_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION"
+    />
+    <Row
+      ModifierId="BBM_ATTACH_PANTHEON_ALTAR_NAVIGABLE_RIVER_PRODUCTION"
+      Name="ConstructibleWarehouseYield"
+      Value="BBM_PantheonAltarNavigableRiverProduction"
+    />
+  </ModifierArguments>
+  <RequirementSets>
+    <Row
+      RequirementSetId="BBM_MOD_PANTHEON_ALTAR_RIVER_PRODUCTION_SUBJECT_REQUIREMENTS"
+      RequirementSetType="REQUIREMENTSET_TEST_ALL"
+    />
+  </RequirementSets>
+  <RequirementSetRequirements>
+    <Row
+      RequirementId="BBM_MOD_PANTHEON_ALTAR_RIVER_PRODUCTION_SUBJECT_REQUIREMENTS_1"
+      RequirementSetId="BBM_MOD_PANTHEON_ALTAR_RIVER_PRODUCTION_SUBJECT_REQUIREMENTS"
+    />
+  </RequirementSetRequirements>
+  <Requirements>
+    <Row
+      RequirementId="BBM_MOD_PANTHEON_ALTAR_RIVER_PRODUCTION_SUBJECT_REQUIREMENTS_1"
+      ProgressWeight="1"
+      RequirementType="REQUIREMENT_PLAYER_HAS_PANTHEON"
+    />
+  </Requirements>
+  <Constructible_WarehouseYields>
+    <Row
+      ConstructibleType="BUILDING_ALTAR"
+      YieldChangeId="BBM_PantheonAltarMinorRiverProduction"
+      RequiresActivation="1"
+    />
+    <Row
+      ConstructibleType="BUILDING_ALTAR"
+      YieldChangeId="BBM_PantheonAltarNavigableRiverProduction"
+      RequiresActivation="1"
+    />
+  </Constructible_WarehouseYields>
+  <Warehouse_YieldChanges>
+    <Row
+      ID="BBM_PantheonAltarMinorRiverProduction"
+      Age="AGE_ANTIQUITY"
+      MinorRiverInCity="1"
+      YieldChange="1"
+      YieldType="YIELD_PRODUCTION"
+    />
+    <Row
+      ID="BBM_PantheonAltarNavigableRiverProduction"
+      Age="AGE_ANTIQUITY"
+      NavigableRiverInCity="1"
+      YieldChange="1"
+      YieldType="YIELD_PRODUCTION"
+    />
+  </Warehouse_YieldChanges>
+</Database>

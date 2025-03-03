@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<EnglishText>
+		<Row Tag="BBM_LOC_PANTHEON_BONUS_2_NAME">
+			<Text>River Goddess</Text>
+		</Row>
+		<Row Tag="BBM_LOC_PANTHEON_BONUS_2_DESCRIPTION">
+			<Text>BBM : +1[icon:YIELD_PRODUCTION] Production on minor and navigable rivers in Settlements with an Altar. Warehouse bonus.
+		</Row>
+	</EnglishText>
+</Database>

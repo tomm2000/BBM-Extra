@@ -79,16 +79,16 @@
   <Constructible_WarehouseYields>
     <Row
       ConstructibleType="BUILDING_ALTAR"
-      YieldChangeId="PantheonAltarResourceGold"
+      YieldChangeId="BBM_PantheonAltarResourceGold"
       RequiresActivation="1"
     />
   </Constructible_WarehouseYields>
   <Warehouse_YieldChanges>
     <Row
-      ID="PantheonAltarResourceGold"
+      ID="BBM_PantheonAltarResourceGold"
       Age="AGE_ANTIQUITY"
       ResourceInCity="1"
-      YieldChange="4"
+      YieldChange="2"
       YieldType="YIELD_GOLD"
     />
   </Warehouse_YieldChanges>

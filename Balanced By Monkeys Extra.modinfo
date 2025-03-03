@@ -48,9 +48,11 @@
       <Actions>
 				<UpdateDatabase>
           <Item>pantheons/god_of_aboundance/data.xml</Item>
+          <Item>pantheons/river_goddess/data.xml</Item>
         </UpdateDatabase>
 				<UpdateText>
           <Item>pantheons/god_of_aboundance/text.xml</Item>
+          <Item>pantheons/river_goddess/text.xml</Item>
         </UpdateText>
       </Actions>
     </ActionGroup>

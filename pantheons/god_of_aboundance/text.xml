@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<EnglishText>
+		<Row Tag="BBM_LOC_PANTHEON_BONUS_1_NAME">
+			<Text>God of aboundance</Text>
+		</Row>
+		<Row Tag="BBM_LOC_PANTHEON_BONUS_1_DESCRIPTION">
+			<Text>BBM : +4[icon:YIELD_GOLD] Gold on Resources in Settlements with an Altar. Warehouse bonus.
+		</Row>
+	</EnglishText>
+</Database>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="balanced_by_monkeys_extra" version="1" xmlns="ModInfo">
+	<Properties>
+		<Name>BBM Extra - Balanced By Monkeys Extra</Name>
+		<Description>Extra content for BBM mod</Description>
+		<Authors>Tomm2000</Authors>
+		<Package>Mod</Package>
+	</Properties>
+	<Dependencies>
+		<Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME"/>
+	</Dependencies>
+	<ActionCriteria>
+    <!-- Age criteria -->
+		<Criteria id="antiquity-age-current">
+			<AgeInUse>AGE_ANTIQUITY</AgeInUse>
+		</Criteria>
+		<Criteria id="exploration-age-current">
+			<AgeInUse>AGE_EXPLORATION</AgeInUse>
+		</Criteria>
+		<Criteria id="modern-age-current">
+			<AgeInUse>AGE_MODERN</AgeInUse>
+		</Criteria>
+
+    <!-- Persistent criteria -->
+    <Criteria id="antiquity-age-persist" any="true">
+      <AgeInUse>AGE_ANTIQUITY</AgeInUse>
+      <AgeInUse>AGE_EXPLORATION</AgeInUse>
+      <AgeInUse>AGE_MODERN</AgeInUse>
+    </Criteria>
+		<Criteria id="exploration-age-persist" any="true">
+			<AgeInUse>AGE_EXPLORATION</AgeInUse>
+			<AgeInUse>AGE_MODERN</AgeInUse>
+		</Criteria>
+    <Criteria id="modern-age-persist" any="true">
+      <AgeInUse>AGE_MODERN</AgeInUse>
+    </Criteria>
+		<Criteria id="always">
+			<AlwaysMet></AlwaysMet>
+		</Criteria>
+	</ActionCriteria>
+
+	<ActionGroups>
+<!-- Antiquity age changes : 10 -->
+    <ActionGroup id="bbm-antiquity-age-changes" scope="game" criteria="antiquity-age-current">
+      <Properties>
+        <LoadOrder>13</LoadOrder>
+      </Properties>
+      <Actions>
+				<UpdateDatabase>
+          <Item>pantheons/god_of_aboundance/data.xml</Item>
+        </UpdateDatabase>
+				<UpdateText>
+          <Item>pantheons/god_of_aboundance/text.xml</Item>
+        </UpdateText>
+      </Actions>
+    </ActionGroup>
+<!-- Antiquity age persistent changes : 11 -->
+    <ActionGroup id="bbm-antiquity-age-persistent-changes" scope="game" criteria="antiquity-age-persist">
+      <Properties>
+        <LoadOrder>13</LoadOrder>
+      </Properties>
+      <Actions>
+      </Actions>
+    </ActionGroup>
+
+<!-- Exploration age changes : 12 -->
+    <ActionGroup id="bbm-exploration-age-changes" scope="game" criteria="exploration-age-current">
+      <Properties>
+        <LoadOrder>13</LoadOrder>
+      </Properties>
+      <Actions>
+      </Actions>
+    </ActionGroup>
+<!-- Exploration age persistent changes : 13 -->
+    <ActionGroup id="bbm-exploration-age-persistent-changes" scope="game" criteria="exploration-age-persist">
+      <Properties>
+        <LoadOrder>13</LoadOrder>
+      </Properties>
+      <Actions>
+      </Actions>
+    </ActionGroup>
+
+<!-- Modern age changes : 14 -->
+    <ActionGroup id="bbm-modern-age-changes" scope="game" criteria="modern-age-current">
+      <Properties>
+        <LoadOrder>13</LoadOrder>
+      </Properties>
+      <Actions>
+      </Actions>
+    </ActionGroup>
+<!-- Modern age persistent changes : 15 -->
+    <ActionGroup id="bbm-modern-age-persistent-changes" scope="game" criteria="modern-age-persist">
+      <Properties>
+        <LoadOrder>13</LoadOrder>
+      </Properties>
+      <Actions>
+      </Actions>
+    </ActionGroup>
+
+<!-- Leader changes : 16 -->
+	</ActionGroups>
+</Mod>

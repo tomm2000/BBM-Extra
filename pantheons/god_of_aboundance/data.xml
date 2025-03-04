@@ -54,7 +54,7 @@
     <Row
       ModifierId="BBM_ATTACH_PANTHEON_ALTAR_RESOURCE_GOLD"
       Name="ConstructibleWarehouseYield"
-      Value="PantheonAltarResourceGold"
+      Value="BBM_PantheonAltarResourceGold"
     />
   </ModifierArguments>
   <RequirementSets>
